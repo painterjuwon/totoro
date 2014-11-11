@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<HTML lang="KO">
+<TITLE>토토로개요</TITLE>
+<head>
+<style type="text/css">
+body {font-family:조선일보명조;
+   color:white;
+   line-height: 1.7em;
+margin: 0px; 
+padding:50px 50px 50px 150px; 
+background-image:url('http://www.dramafever.com/st/news/images/My.Neighbor.Totoro.full_.34268.jpg')
+ }
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#won {
+	position: absolute;
+
+	margin : 100px 0px 0px 0px;
+	font-size: 2em;
+}
+#des {
+	font-family: 조선일보명조; -윤명조320;
+	color: #ffffff;
+	line-height: 0.8em;
+	text-align: left;
+}
+}
+  @media screen and (max-width: 640px){
+#jul {color: green;
+	font-family: 조선일보명조; -윤명조320;
+		margin-right: 1500px;
+	line-height: 2em;
+	text-align: left;
+}
+}
+  @media screen and (max-width: 600px){
+#jul {
+	font-family: 조선일보명조; -윤명조320;
+	color: gray;
+	margin-right: 1500px;
+	line-height: 2em;
+	text-align: left;
+}
+}
+@media screen and (max-width: 400px){
+#jul {
+	font-family: 조선일보명조; -윤명조320;
+	color: blue;
+	margin-right: 1500px;
+	line-height: 1.6em;
+	text-align: left;
+}
+}
+#bae { 
+	position: absolute;
+	margin: -550px 0px 0px 570px;
+	line-height: 1.5em;
+}
+}
+</style>
+</HEAD>
+<BODY>
+		
+	<div id="des">
+			<img src="http://movie.phinf.naver.net/20111221_29/1324474572925tnOPa_JPEG/movie_image.jpg?type=m886_590_2" width="500" height="300"alt="이미지 불러오는 중...">
+	<h1>이웃집토토로</h1>
+	<h3>となりの トトロ , My Neighbor Totoro , 1988
+	</h3>
+	</div>
+
+
+
+<div id="jul">
+1955년 일본의 아름다운 시골 마을. 상냥하고 의젓한 11살 사츠키와 장난꾸러기에 호기심 많은 4살의 메이 는 사이좋은 자매로 아빠와 함께 도시를 떠나 시골로 이사온다. 자상한 아빠 쿠사카베타츠오는 도쿄에서 대학 연구원이며, 입원 중이지만 따뜻한 미소를 잃지 않는 엄마가 있다. 곧 퇴원하실 엄마를 공기가 맑은 곳에서 맞이하기 위해서다. 숲 한복판에 금방이라도 쓰러질 것처럼 낡은 집을 보며 자매는 새로운 환경에 대한 호기심으로 잔뜩 들뜬다.
+ 사츠키가 학교에 간 뒤, 혼자 숲에서 놀고 있던 메이는 눈 앞을 지나가는 조그맣고 이상한 동물을 발견한다. 그리고 뒤를 쫓아 숲속으로 들어가는데... 미로처럼 꼬불꼬불한 길을 따라가다 큰 나무 밑둥으로 떨어지는 메이. 그곳에서 메이는 도토리 나무의 요정인 토토로를 만난다. 메이는 사츠키가 돌아오지마자 토토로를 만난 것을 자랑하지만 사츠키는 믿지 않는다. 그러나 비가 몹시 쏟아지던 날, 정류장에서 우산을 들고 아빠를 기다리다가 사츠키도 토토로를 만나게 되는데...
+</div>
+<div id="bae">
+	개요: 애니메이션, 가족, 판타지 / 일본 / 87분 / 2001.07.28 개봉<br>
+	<br>감독 : 미야자키 하야오<br>
+	<br>출연 : 히다카 노리코(사츠키 목소리 역), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사카모토 치카(메이 목소리 역), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이토이 시게사토(쿠사카베 타츠오 목소리 역), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시마모토 스미(쿠사카베 야스코 목소리 역), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;키타바야시 타니에(칸타의 할머니 목소리 역), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;타카기 히토시(토토로 목소리 역), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;마루야마 유코 역(칸타의 엄마 목소리 역), <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;와시오 마치코(선생님 목소리 역)<br>
+	<br>등급 : 전체 관람가
+	</div>
+
+
+
+<div id="won">
+	<a href="토토로등장인물소개.html">등장인물 보러가기!</a><br><br>
+	<a href="토토로스틸컷.html">스틸컷 보러가기!</a><br><br>
+	<a href="http://youtu.be/YflwF6-42EM">동영상 보러가기!</a><br><br>
+	
+</div>
+</BODY>
+</HTML>
