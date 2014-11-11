@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html> 
+<head>토토로등장인물소개</head> 
+<style type="text/css"> 
+body {font-family:조선일보명조; 
+color:white; 
+text-align:center; padding:0px; background-image:url('http://www.dramafever.com/st/news/images/My.Neighbor.Totoro.full_.34268.jpg') 
+} 
+@media screen and (max-width:360px){
+            #mayp {display:none;}
+            }
+         @media screen and (min-width: 361px) and (max-width:640px){
+            #totorop { display:none;}            }
+    
+            @media screen and (min-width: 641px){
+            } 
+
+#totoroi { 
+margin:36px 0px 10px 30px;} 
+
+#totoroi2 {margin:70px 0px 10px 30px;} 
+
+.totorop {margin-left:45px; 
+width:300px; 
+height: 300px;} 
+
+.satukip,.mayp,.daddyp {margin-left:120px; 
+width:300px; 
+height: 300px;} 
+
+.kantap {margin-left: 
+-880px; 
+margin-top:110px; 
+width:300px; 
+height: 300px;} 
+
+.catbusp,.babytotorop,.makurokuroskep {margin-left:120px; 
+width:300px; 
+height: 300px;} 
+
+#text {margin-left:70px; 
+text-align: justify; 
+line-height: 45%} 
+
+#text2 {margin-top:-261px; 
+margin-left:499px; 
+text-align: justify; 
+line-height: 45%} 
+
+#text3 {margin-top:-192px; 
+margin-left:925px; 
+text-align: justify; 
+line-height: 45%} 
+
+#text5 {margin-left: 
+-852px; 
+text-align: justify; 
+line-height: 45%} 
+
+#text6 {margin-top:-192px; 
+margin-left: 427px; 
+text-align: justify; 
+line-height: 45%} 
+
+#text7 {margin-top:-215px; 
+line-height: 45%; 
+margin-left:851px;} 
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+</style> 
+ <meta charset="utf-8"> 
+ <title>등장인물</title> 
+</head> 
+
+<body> 
+
+<div id="totoroi"> 
+<img src="http://image.aladin.co.kr/Community/mypaper/pimg_759069163108594.jpg" alt="totoro" class="totorop"> 
+
+<img src="http://img2.ruliweb.com/img/img_link7/512/511421_4.jpg" alt="satuki" class="satukip"> 
+
+<img src="http://cfile9.uf.tistory.com/image/163E41524D1F664701F342" alt="may" class="mayp"> 
+
+
+
+<div id="text"> 
+<h2>토토로(トトロ)</h2></p><p> 
+
+사람이 살기 훨씬 전 
+<p>먼 옛날부터 숲 속에 살고 있다고 전해지는 요정. </p><p> 
+수명은 천 년 이상이라고 한다.</p><p> 
+2미터가 넘는 체구, 복실복실한 털에 둘러 쌓여 있다.</p><p> 
+부엉이와 너구리, 곰을 섞어 놓은 듯한 모습.</p><p> 
+숲 속의 동굴이나 오래된 나무 속에 살고,</p> <p>소란스러운 것을 싫어하며</p><p> 
+순수한 어린이의 눈에만 보인다.</p><p> 
+포동포동한 체격에 입을 한껏 벌리고</p><p>함박 웃음을 즐겨 짓는 호기심많고 유쾌한 친구. </p> 
+
+
+</div> 
+
+<div id="text2"> 
+<h2>사츠키(サツキ)</h2><p> 
+뜨거운 태양 아래서도</p><p> 신나게 뛰어 놀 것 같은 활력 넘치는 소녀.</p><p>소녀다운 것을 싫어하고 달리기와 웃는 것을 좋아하고</p><p> 남자아이들과도 대등하게 싸우는 씩씩한 열 한 살.</p><p> 집에서는 어머니를 대신해</p><p> 아빠와 동생을 돌봐야 하기 때문에</p><p> 힘든 순간이 와도 눈물을 꾹 참는 어른스러운 맏이.</p> 
+</div> 
+
+<div id="text3"> 
+<h2>메이(メイ)</h2><p> 
+호기심이 많고 겁도 없는 장난꾸러기 네 살 박이.</p><p> 무언가를 하고자 마음먹으면</p><p> 아무도 그 고집을 꺾지 못 한다.</p><p>그러나 사실 외로움을 많이 타기에</p><p> 사츠키와 떨어지기 싫어한다.</p><p>토토로를 처음 발견하는 주인공. </p> 
+
+
+
+<div id="totoroi2"> 
+
+<img src="http://cfile233.uf.daum.net/image/201BD2474E58846913A344" alt="kanta" class="kantap"> 
+
+<img src="http://cfs6.blog.daum.net/image/21/blog/2007/11/03/00/45/472b4607ba890&filename=A8781-18.jpg" alt="catbus" class="catbusp"> 
+
+<img src="http://cfile25.uf.tistory.com/image/185C41474D1F66490791AD" alt="babytotoro" class="babytotorop"> 
+
+
+
+<div id="text5"> 
+<h2>칸타(カンタ)</h2><p> 
+할머니와 같이 사는 옆 집의 소년.</p><p> 사츠키와 같은 반 친구이지만 </p><p>사츠키에게 말도 걸지 못 한다.</p><p> 사츠키를 좋아하지만</p><p> 맘과 다르게 사츠키를 자꾸 놀리게 되어서 고민중이다.</p><p> 비오는 날 사츠키에게 우산을 건네주고</p><p> 자신은 비를 쫄딱 맞으며 행복해 하는 순정파</p> 
+
+<div id="text6"> 
+<h2>고양이 버스</h2><p> 
+토토로가 먼 거리로 이동할 때 애용하는 교통수단.</p><p> 외모는 전형적인 집고양이를 수백배 불려놓은 듯한</p><p> 모습이지만 일단 승객을 태우고 출발하면</p><p> 바람보다 빨리 허공을 날아다닌다.</p><p> 폭신폭신한 털로 쌓여있는 탓에대단히 안락한 </p><p>승차감을 자랑한다.</p><p> 늘 웃는 얼굴로 승객을 맞이하는,</p><p> 서비스 정신 역시 투철한 최고의 버스. </p> 
+</div> 
+
+<div id="text7"> 
+<h2>아기 토토로</h2><p>토토로의 보호 아래 숲에서 함께 살고 있는 토토로 가족.</p><p> 가족도 없이 혼자 사는 토토로와 달리</p><p> 엄마, 아빠, 아기가 단란하게 모여 살고 있다.</p><p> 가끔 숲 바깥으로 돌아다니기 좋아하는</p><p> 천방지축 아기 토토로 덕분에</p><p> 메이에게 토토로의 정체를 들키고 만다.</p><p> 거대한 토토로와 달리</p><p> 깜찍하고 앙징맞기 그지없는 친구들.</p> 
+</div> 
+
+</body>
+</html>
