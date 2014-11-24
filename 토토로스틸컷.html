@@ -1,51 +1,159 @@
 <!DOCTYPE HTML> 
 <HTML lang="KO"> 
-<TITLE>토토로스틸컷</TITLE>
+<TITLE>토토로스틸컷</TITLE> 
 <style type="text/css"> 
 body {font-family: helvetica; 
 color:white; 
- background-image:url('http://www.dramafever.com/st/news/images/My.Neighbor.Totoro.full_.34268.jpg') 
+background-image:url('http://www.dramafever.com/st/news/images/My.Neighbor.Totoro.full_.34268.jpg') 
 } 
-h2{
-	font-size:10vw;
-}
-div{
-	margin: auto;
-	width: 80%;
-}
-a {
-	text-decoration: none;
-	color: white;
-}
-.aa{
-	width: 30%;
-	
-	margin: 15px 1% 15px 1%;
-}
-h2 {
-	margin: auto;
-}
-</style> 
+h2{ 
+font-size:10vw; 
+} 
+div{ 
+margin: auto; 
+width: 80%; 
+} 
+a { 
+text-decoration: none; 
+color: white; 
+} 
+.aa{ 
+width: 30%; 
 
+margin: 15px 1% 15px 1%; 
+} 
+h2 { 
+margin: auto; 
+} 
+  
+</style> 
+ <script type="text/javascript"> 
+// <![CDATA[ 
+var speed=30; // lower number for faster 
+var drops=100; // number of 'drops' 
+var colour="white"; // colour of drops (generally grey!) 
+
+
+var flks=new Array(); 
+var flkx=new Array(); 
+var flky=new Array(); 
+var fldy=new Array(); 
+var swide, shigh, boddie; 
+var ie_version=(navigator.appVersion.indexOf("MSIE")!=-1)?parseFloat(navigator.appVersion.split("MSIE")[1]):false; 
+
+function addLoadEvent(funky) { 
+ var oldonload=window.onload; 
+ if (typeof(oldonload)!='function') window.onload=funky; 
+ else window.onload=function() { 
+   if (oldonload) oldonload(); 
+   funky(); 
+ } 
+} 
+
+addLoadEvent(storm); 
+
+function storm() { if (document.getElementById) { 
+ var r1, r2; 
+ boddie=document.createElement("div"); 
+ boddie.style.position="fixed"; 
+ boddie.style.top="0px"; 
+ boddie.style.left="0px"; 
+ boddie.style.width="1px"; 
+ boddie.style.height="1px"; 
+ boddie.style.overflow="visible"; 
+ boddie.style.backgroundColor="transparent"; 
+ document.body.appendChild(boddie); 
+ set_width(); 
+ for (var i=0; i<drops; i++) { 
+   flks[i]=createDiv(16, 2, "transparent"); 
+   r1=createDiv(6, 2, colour); 
+   r1.style.top="10px"; 
+   r1.style.left="0px"; 
+   flks[i].appendChild(r1); 
+   r2=createDiv(10, 2, colour); 
+   r2.style.top="0px"; 
+   r2.style.left="0px"; 
+   if (ie_version && ie_version<10) r2.style.filter="alpha(opacity=25)"; 
+   else r2.style.opacity=0.25; 
+   flks[i].appendChild(r2); 
+   flkx[i]=2*Math.floor(Math.random()*swide/2); 
+   flky[i]=Math.floor(Math.random()*shigh); 
+   fldy[i]=2+Math.floor(Math.random()*4); 
+   flks[i].style.left=flkx[i]+"px"; 
+   flks[i].style.top=flky[i]+"px"; 
+   boddie.appendChild(flks[i]); 
+ } 
+ setInterval("cats_and_dogs()", speed); 
+}} 
+
+function createDiv(height, width, colour) { 
+ var div=document.createElement("div"); 
+ div.style.position="absolute"; 
+ div.style.height=height+"px"; 
+ div.style.width=width+"px"; 
+ div.style.overflow="hidden"; 
+ div.style.backgroundColor=colour; 
+ return (div); 
+} 
+
+window.onresize=set_width; 
+function set_width() { 
+ var sw_min=999999; 
+ var sh_min=999999; 
+ if (document.documentElement && document.documentElement.clientWidth) { 
+   sw_min=document.documentElement.clientWidth; 
+   sh_min=document.documentElement.clientHeight; 
+ } 
+ if (typeof(self.innerWidth)!="undefined" && self.innerWidth) { 
+   if (self.innerWidth<sw_min) sw_min=self.innerWidth; 
+   if (self.innerHeight<sh_min) sh_min=self.innerHeight; 
+ } 
+ if (document.body.clientWidth) { 
+   if (document.body.clientWidth<sw_min) sw_min=document.body.clientWidth; 
+   if (document.body.clientHeight<sh_min) sh_min=document.body.clientHeight; 
+ } 
+ if (sw_min==999999 || sh_min==999999) { 
+   sw_min=800; 
+   sh_min=600; 
+ } 
+ swide=sw_min-2; 
+ shigh=sh_min; 
+} 
+
+function cats_and_dogs(c) { 
+ var i, x, o=0; 
+ for (i=0; i<drops; i++) { 
+   flky[i]+=fldy[i]; 
+   if (flky[i]>=shigh-16) { 
+ flky[i]=-16; 
+ fldy[i]=2+Math.floor(Math.random()*4); 
+ flkx[i]=2*Math.floor(Math.random()*swide/2); 
+ flks[i].style.left=flkx[i]+"px"; 
+} 
+flks[i].style.top=flky[i]+"px"; 
+ } 
+} 
+// ]]> 
+</script> 
 </HEAD> 
 <BODY> 
-  <h2 onclick="this.innerHTML='!우리의 친구 토토로쨔응!'">☞주인공의 이름이 뭐라고!!!!!?☜</h2>
-<div>
+<h2 onclick="this.innerHTML='!우리의 친구 토토로쨔응!'">☞주인공의 이름이 뭐라고!!!!!?☜</h2> 
+<div> 
 <img src="http://24.media.tumblr.com/tumblr_mdexencsxA1rt479bo1_500.gif"alt="1" class="aa"> 
-<img src="http://31.media.tumblr.com/tumblr_lp7prkloN21qel6s1o1_500.gif"alt="2" class="aa">
-<img src="http://cfile207.uf.daum.net/image/2334ED38522401D11E66A7"alt="3" class="aa">
-<img src="http://www.dakdw.com/img_src/ani.120721112509.VNaW5.jpg" alt="4" class="aa">
-<img src="http://movie.phinf.naver.net/20111221_38/1324474562405sqq9E_JPEG/movie_image.jpg?type=m665_443_2" alt="5" class="aa">
-<img src="http://movie.phinf.naver.net/20111221_69/1324474571378BVq4J_JPEG/movie_image.jpg?type=m665_443_2" alt="6" class="aa">
-<img src="http://club.japansisa.com/__data/_bbs/116/116/9/212/212/9.1.20110815204510.jpg" alt="5" class="aa">
+<img src="http://31.media.tumblr.com/tumblr_lp7prkloN21qel6s1o1_500.gif"alt="2" class="aa"> 
+<img src="http://cfile207.uf.daum.net/image/2334ED38522401D11E66A7"alt="3" class="aa"> 
+<img src="http://www.dakdw.com/img_src/ani.120721112509.VNaW5.jpg" alt="4" class="aa"> 
+<img src="http://movie.phinf.naver.net/20111221_38/1324474562405sqq9E_JPEG/movie_image.jpg?type=m665_443_2" alt="5" class="aa"> 
+<img src="http://movie.phinf.naver.net/20111221_69/1324474571378BVq4J_JPEG/movie_image.jpg?type=m665_443_2" alt="6" class="aa"> 
+<img src="http://club.japansisa.com/__data/_bbs/116/116/9/212/212/9.1.20110815204510.jpg" alt="5" class="aa"> 
 <img src="http://cfile213.uf.daum.net/image/24182F42532AF6CC157FCB" alt="6" 
 class="aa"> 
 <img src="http://media2.giphy.com/media/BRN2Xi0MqnjjO/giphy.gif" alt="7" class="aa"> 
-<img src="http://www.familyjoa.co.kr/data/cheditor4/1105/G9B7YYKSrP8C7Qruu.jpg" alt="7" class="aa">
+<img src="http://www.familyjoa.co.kr/data/cheditor4/1105/G9B7YYKSrP8C7Qruu.jpg" alt="7" class="aa"> 
 <img src="http://www.dakdw.com/img_src/ani.120721112509.wOYF0.jpg"alt="7" class="aa"> 
 <img src="http://tpholic.com/xe/files/attach/images/76/022/681/006/Tonari_no_Totoro_Wallpaper_2_by_ihateyouare.jpg"alt="7" class="aa"> 
 
-</div>
+</div> 
 
 </BODY> 
 </HTML>
