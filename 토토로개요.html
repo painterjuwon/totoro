@@ -3,163 +3,7 @@
 <TITLE>토토로개요</TITLE> 
 <head> 
 <script> 
-(function () 
-{ 
-   function k(a, b, c) 
-   { 
-       if (a.addEventListener) { 
-           a.addEventListener(b, c, false); 
-       } 
-       else { 
-           a.attachEvent && a.attachEvent("on" + b, c); 
-       } 
-   } 
-   function g(a) 
-   { 
-       if (typeof window.onload != "function") 
-       { 
-           window.onload = a; 
-       } 
-       else { 
-           var b = window.onload; 
-           window.onload = function () 
-           { 
-               b(); 
-               a() 
-           } 
-       } 
-   } 
-   function h() 
-   { 
-       var a = {}; 
-       for (type in { 
-           Top : "", Left : "" 
-       }) 
-       { 
-           var b = type == "Top" ? "Y" : "X"; 
-           if (typeof window["page" + b + "Offset"] != "undefined") { 
-               a[type.toLowerCase()] = window["page" + b + "Offset"]; 
-           } 
-           else 
-           { 
-               b = document.documentElement.clientHeight ? document.documentElement : document.body; 
-               a[type.toLowerCase()] = b["scroll" + type]; 
-           } 
-       } 
-       return a 
-   } 
-   function l() 
-   { 
-       var a = document.body, b; 
-       if (window.innerHeight) { 
-           b = window.innerHeight; 
-       } 
-       else if (a.parentElement.clientHeight) { 
-           b = a.parentElement.clientHeight; 
-       } 
-       else if (a && a.clientHeight) { 
-           b = a.clientHeight; 
-       } 
-       return b 
-   } 
-   function i(a) 
-   { 
-       this.parent = document.body; 
-       this.createEl(this.parent, a); 
-       this.size = Math.random() * 4 + 4; 
-       this.el.style.width = Math.round(this.size) + "px"; 
-       this.el.style.height = Math.round(this.size) + "px"; 
-       this.maxLeft = document.body.offsetWidth - this.size; 
-       this.maxTop = document.body.offsetHeight - this.size; 
-       this.left = Math.random() * this.maxLeft; 
-       this.top = h().top + 1; 
-       this.angle = 1.4 + 0.2 * Math.random(); 
-       this.minAngle = 1.4; 
-       this.maxAngle = 1.6; 
-       this.angleDelta = 0.01 * Math.random(); 
-       this.speed = 4 + Math.random() 
-   } 
-   var j = false; 
-   g(function () 
-   { 
-       j = true; 
-   }); 
-   var f = true; 
-   window.createSnow = function (a, b) 
-   { 
-       if (j) 
-       { 
-           var c = [], m = setInterval(function () 
-           { 
-               f && b > c.length && Math.random() < b * 0.0025 && c.push(new i(a)); 
-               !f && !c.length && clearInterval(m); 
-               for (var e = h().top, n = l(), d = c.length - 1; d >= 0; d--) if (c[d]) if (c[d].top < e || c[d].top + c[d].size + 1 > e + n) { 
-                   c[d].remove(); 
-                   c[d] = null; 
-                   c.splice(d, 1) 
-               } 
-               else { 
-                   c[d].move(); 
-                   c[d].draw() 
-               } 
-           }, 40); 
-           k(window, "scroll", function () 
-           { 
-               for (var e = c.length - 1; e >= 0; e--) { 
-                   c[e].draw(); 
-               } 
-           }) 
-       } 
-       else { 
-           g(function () 
-           { 
-               createSnow(a, b) 
-           }); 
-       } 
-   }; 
-   window.removeSnow = function () 
-   { 
-       f = false; 
-   }; 
-   i.prototype = 
-   { 
-       createEl : function (a, b) 
-       { 
-           this.el = document.createElement("img"); 
-           this.el.setAttribute("src", b + "./img/snow" + Math.floor(Math.random() * 4) + ".gif"); 
-           this.el.style.position = "absolute"; 
-           this.el.style.display = "block"; 
-           this.el.style.zIndex = "99999"; 
-           this.parent.appendChild(this.el) 
-       }, 
-       move : function () 
-       { 
-           if (this.angle < this.minAngle || this.angle > this.maxAngle) { 
-               this.angleDelta =- this.angleDelta; 
-           } 
-           this.angle += this.angleDelta; 
-           this.left += this.speed * Math.cos(this.angle * Math.PI); 
-           this.top -= this.speed * Math.sin(this.angle * Math.PI); 
-           if (this.left < 0) { 
-               this.left = this.maxLeft; 
-           } 
-           else if (this.left > this.maxLeft) { 
-               this.left = 0; 
-           } 
-       }, 
-       draw : function () 
-       { 
-           this.el.style.top = Math.round(this.top) + "px"; 
-           this.el.style.left = Math.round(this.left) + "px"; 
-       }, 
-       remove : function () 
-       { 
-           this.parent.removeChild(this.el); 
-           this.parent = this.el = null; 
-       } 
-   } 
-}) 
-(); 
+
 window.onload =function(){ 
 var d = new Date(); 
 var h = d.getHours(); 
@@ -168,7 +12,114 @@ if (h<12) { document.body.style.
 color ="#FAED7D";} 
 else{document.body.style.color="pink";}} 
 </script> 
-  
+ <script type="text/javascript"> 
+// <![CDATA[ 
+var speed=30; // lower number for faster 
+var drops=100; // number of 'drops' 
+var colour="white"; // colour of drops (generally grey!) 
+
+
+var flks=new Array(); 
+var flkx=new Array(); 
+var flky=new Array(); 
+var fldy=new Array(); 
+var swide, shigh, boddie; 
+var ie_version=(navigator.appVersion.indexOf("MSIE")!=-1)?parseFloat(navigator.appVersion.split("MSIE")[1]):false; 
+
+function addLoadEvent(funky) { 
+ var oldonload=window.onload; 
+ if (typeof(oldonload)!='function') window.onload=funky; 
+ else window.onload=function() { 
+   if (oldonload) oldonload(); 
+   funky(); 
+ } 
+} 
+
+addLoadEvent(storm); 
+
+function storm() { if (document.getElementById) { 
+ var r1, r2; 
+ boddie=document.createElement("div"); 
+ boddie.style.position="fixed"; 
+ boddie.style.top="0px"; 
+ boddie.style.left="0px"; 
+ boddie.style.width="1px"; 
+ boddie.style.height="1px"; 
+ boddie.style.overflow="visible"; 
+ boddie.style.backgroundColor="transparent"; 
+ document.body.appendChild(boddie); 
+ set_width(); 
+ for (var i=0; i<drops; i++) { 
+   flks[i]=createDiv(16, 2, "transparent"); 
+   r1=createDiv(6, 2, colour); 
+   r1.style.top="10px"; 
+   r1.style.left="0px"; 
+   flks[i].appendChild(r1); 
+   r2=createDiv(10, 2, colour); 
+   r2.style.top="0px"; 
+   r2.style.left="0px"; 
+   if (ie_version && ie_version<10) r2.style.filter="alpha(opacity=25)"; 
+   else r2.style.opacity=0.25; 
+   flks[i].appendChild(r2); 
+   flkx[i]=2*Math.floor(Math.random()*swide/2); 
+   flky[i]=Math.floor(Math.random()*shigh); 
+   fldy[i]=2+Math.floor(Math.random()*4); 
+   flks[i].style.left=flkx[i]+"px"; 
+   flks[i].style.top=flky[i]+"px"; 
+   boddie.appendChild(flks[i]); 
+ } 
+ setInterval("cats_and_dogs()", speed); 
+}} 
+
+function createDiv(height, width, colour) { 
+ var div=document.createElement("div"); 
+ div.style.position="absolute"; 
+ div.style.height=height+"px"; 
+ div.style.width=width+"px"; 
+ div.style.overflow="hidden"; 
+ div.style.backgroundColor=colour; 
+ return (div); 
+} 
+
+window.onresize=set_width; 
+function set_width() { 
+ var sw_min=999999; 
+ var sh_min=999999; 
+ if (document.documentElement && document.documentElement.clientWidth) { 
+   sw_min=document.documentElement.clientWidth; 
+   sh_min=document.documentElement.clientHeight; 
+ } 
+ if (typeof(self.innerWidth)!="undefined" && self.innerWidth) { 
+   if (self.innerWidth<sw_min) sw_min=self.innerWidth; 
+   if (self.innerHeight<sh_min) sh_min=self.innerHeight; 
+ } 
+ if (document.body.clientWidth) { 
+   if (document.body.clientWidth<sw_min) sw_min=document.body.clientWidth; 
+   if (document.body.clientHeight<sh_min) sh_min=document.body.clientHeight; 
+ } 
+ if (sw_min==999999 || sh_min==999999) { 
+   sw_min=800; 
+   sh_min=600; 
+ } 
+ swide=sw_min-2; 
+ shigh=sh_min; 
+} 
+
+function cats_and_dogs(c) { 
+ var i, x, o=0; 
+ for (i=0; i<drops; i++) { 
+   flky[i]+=fldy[i]; 
+   if (flky[i]>=shigh-16) { 
+     flky[i]=-16; 
+     fldy[i]=2+Math.floor(Math.random()*4); 
+     flkx[i]=2*Math.floor(Math.random()*swide/2); 
+     flks[i].style.left=flkx[i]+"px"; 
+   } 
+   flks[i].style.top=flky[i]+"px"; 
+ } 
+} 
+// ]]> 
+</script> 
 <style type="text/css"> 
 body {font-family:조선일보명조; 
     color:white; 
@@ -182,8 +133,8 @@ background-image:url('http://www.dramafever.com/st/news/images/My.Neighbor.Totor
 } 
   
 a { 
-text-decoration: none; 
-color: #ffffff; 
+   text-decoration: none; 
+   color: #ffffff; 
 } 
 
  #jul {line-height:35%;} 
@@ -192,12 +143,12 @@ color: #ffffff;
 </HEAD> 
 <BODY> 
 
-<div id="des"> 
-<img src="http://movie.phinf.naver.net/20111221_29/1324474572925tnOPa_JPEG/movie_image.jpg?type=m886_590_2" width="500" height="300"alt="이미지 불러오는 중..."> 
-<h1>이웃집토토로</h1> 
-<h3>となりの トトロ , My Neighbor Totoro , 1988 
-</h3> 
-</div> 
+   <div id="des"> 
+   <img src="http://movie.phinf.naver.net/20111221_29/1324474572925tnOPa_JPEG/movie_image.jpg?type=m886_590_2" width="500" height="300"alt="이미지 불러오는 중..."> 
+   <h1>이웃집토토로</h1> 
+   <h3>となりの トトロ , My Neighbor Totoro , 1988 
+   </h3> 
+   </div> 
 
 
 
@@ -207,17 +158,17 @@ color: #ffffff;
 </div> 
 <div id="bae"> 
 개요: 애니메이션, 가족, 판타지 / 일본 / 87분 / 2001.07.28 개봉<br> 
-<br>감독 : 미야자키 하야오<br> 
-<br>출연 : 히다카 노리코(사츠키 목소리 역), <br>         사카모토 치카(메이 목소리 역), <br>         이토이 시게사토(쿠사카베 타츠오 목소리 역), <br>         시마모토 스미(쿠사카베 야스코 목소리 역), <br>         키타바야시 타니에(칸타의 할머니 목소리 역), <br>         타카기 히토시(토토로 목소리 역), <br>         마루야마 유코 역(칸타의 엄마 목소리 역), <br>         와시오 마치코(선생님 목소리 역)<br> 
-<br>등급 : 전체 관람가 
+   <br>감독 : 미야자키 하야오<br> 
+   <br>출연 : 히다카 노리코(사츠키 목소리 역), <br>         사카모토 치카(메이 목소리 역), <br>         이토이 시게사토(쿠사카베 타츠오 목소리 역), <br>         시마모토 스미(쿠사카베 야스코 목소리 역), <br>         키타바야시 타니에(칸타의 할머니 목소리 역), <br>         타카기 히토시(토토로 목소리 역), <br>         마루야마 유코 역(칸타의 엄마 목소리 역), <br>         와시오 마치코(선생님 목소리 역)<br> 
+   <br>등급 : 전체 관람가 
 </div> 
 
 
 
 <div id="won"> 
-<a href="토토로등장인물소개.html">등장인물 보러가기!</a><br><br> 
-<a href="토토로스틸컷.html">스틸컷 보러가기!</a><br><br> 
-<a href="http://youtu.be/YflwF6-42EM"&gt;동영상 보러가기!</a><br><br> 
+   <a href="토토로등장인물소개.html">등장인물 보러가기!</a><br><br> 
+   <a href="토토로스틸컷.html">스틸컷 보러가기!</a><br><br> 
+   <a href="http://youtu.be/YflwF6-42EM"&gt;동영상 보러가기!</a><br><br> 
 
 </div> 
 </BODY> 
