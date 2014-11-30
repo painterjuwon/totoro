@@ -9,14 +9,14 @@ var d = new Date();
 var h = d.getHours(); 
   
 if (h<12) { document.body.style. 
-color ="#CEF279";} 
-else{document.body.style.color="#B2EBF4";}} 
+color ="#ffda29";} 
+else{document.body.style.color="#ffda29";}} 
 </script> 
    <script type="text/javascript"> 
 // <![CDATA[ 
 var speed=30; // lower number for faster 
 var drops=100; // number of 'drops' 
-var colour="white"; // colour of drops (generally grey!) 
+var colour="#ffda29"; // colour of drops (generally grey!) 
 
 
 var flks=new Array(); 
@@ -121,7 +121,16 @@ flks[i].style.top=flky[i]+"px";
 // ]]> 
 </script> 
 <style type="text/css"> 
-body {font-family:조선일보명조; 
+@font-face {
+    font-family:'NanumGothic';
+    src: url('images/NanumGothic.eot');
+    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('images/NanumGothic.woff') format('woff'),
+         url('images/NanumGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {font-family: 'NanumGothic', 'MalgunGothic';
 color:white; 
 width:1800px; 
 height: 1260px; 
@@ -138,6 +147,20 @@ height: 300px;}
 .satukip,.mayp,.daddyp {margin-left:120px; 
 width:300px; 
 height: 300px;} 
+.totorop:hover{
+   box-shadow: 0px 0px 20px #ffda29;}
+.satukip:hover{
+   box-shadow: 0 0 20px #ffda29;}
+   .mayp:hover{
+   box-shadow: 0 0 20px #ffda29;}
+   .daddyp:hover{
+   box-shadow: 0 0 20px #ffda29;}
+   .kantap:hover{
+   box-shadow: 0 0 20px #ffda29;}
+   .catbusp:hover{
+   box-shadow: 0 0 20px #ffda29;}
+   .babytotorop:hover{
+   box-shadow: 0 0 20px #ffda29;}
 .kantap {margin-left: 
 -880px; 
 margin-top:110px; 
