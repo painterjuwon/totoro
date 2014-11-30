@@ -2,7 +2,9 @@
 <HTML lang="KO">
 <TITLE>토토로입장하기</TITLE>
 <head>
+
 <script>
+
  window.onload =function(){ 
  var d = new Date(); 
  var h = d.getHours(); 
@@ -11,7 +13,15 @@ if (h<12) { alert ("이른아침에도 토토로 봐줘야지!");}
          else { alert ("저녁엔 역시 토토로지!");}} 
 </script>
 <style type="text/css">
-
+@font-face {
+    font-family:'NanumGothic';
+    src: url('images/NanumGothic.eot');
+    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('images/NanumGothic.woff') format('woff'),
+         url('images/NanumGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
    @media screen and (min-width: 10%){
 #aa {
 	
@@ -23,21 +33,21 @@ if (h<12) { alert ("이른아침에도 토토로 봐줘야지!");}
 	} 
 }
  
-body {font-family:조선일보명조;
+body {font-family: 'NanumGothic', 'MalgunGothic';
    color:white;
 
 	margin: auto;
-   font-size: 500%;
+   font-size: 100%;
 
    background-image:url('http://www.dramafever.com/st/news/images/My.Neighbor.Totoro.full_.34268.jpg')
 
 }
 a {
  text-decoration: none;
- color: white;
+ color: #ffda29;
 }
 h1 {
-	font-size: 10vw;
+	font-size: 7vw;
 	margin : absolute;
 	margin-top: 200px;
 	text-align: center;
@@ -50,6 +60,7 @@ h1 {
 	<div id="aa">
 <a href ="토토로개요.html" >
  	<h1>이웃집 토토로</h1></a>
-</div>
+ 	</div>
+ 
 </BODY>
 </HTML>
